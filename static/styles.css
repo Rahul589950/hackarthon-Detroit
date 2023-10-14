@@ -1,0 +1,93 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+.accordion .content {
+  padding: 0.5em 1.5em 0.5em;
+}
+
+.content1 {
+  padding: 0.5em 1em 8px;
+}
+
+* {
+  font-size: 16px;
+  font-family: "Montserrat", Helvetica, sans-serif;
+}
+
+/* Accordion Styles */
+.accordion {
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid #ECF0F1;
+}
+
+/* Button Styles */
+.accordion-btn {
+  background-color: #2C3E50;
+  font-size: 1.5em;
+  color: #ECF0F1;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  border: none;
+  transition: 0.5s;
+  padding:10px;
+}
+
+.accordion-btn span {
+  padding-left: 0.5em;
+}
+
+.accordion-btn:after {
+  content: "+";
+  font-size: 1em;
+  color: #ECF0F1;
+  float: left;
+  margin-left: 2px;
+}
+
+/* Active and Hover Button Styles */
+.accordion-btn.active,
+.accordion-btn:hover {
+  background-color: #3f5973;
+}
+
+.accordion-btn.active:after {
+  content: "-";
+}
+
+/* Panel Styles */
+.panel {
+  background-color: #ECF0F1;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.panel p {
+  font-size: 1.2em;
+  padding: 0 2em;
+}
+
+/* Show Panel onclick */
+.panel.show {
+  display: block;
+  opacity: 1;
+  max-height: 500px;
+}
+
+/* Inner Accordion Style */
+.inner-accord {
+  background-color: #5b80a4;
+  font-size: 1.2em;
+  margin-left: 1.25em;
+}
+
+.inner-accord.active,
+.inner-accord:hover {
+  background-color: #7b99b7;
+}
+
+header{font-size: 20px;text-align: center;padding:20px;}
+header h1{padding-top:20px;}
+.section{display: inline-block;width: 30%;vertical-align: top;}
+.submit{display: block;}
