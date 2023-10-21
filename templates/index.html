@@ -18,242 +18,87 @@
 <body>
 
   <header>
-    <img src="{{ url_for('static', filename='download.png') }}" alt="Image" width="500">
-    <h1>Disease Prediction</h1>
+    <a href="/"><img src="{{ url_for('static', filename='download.png') }}" alt="Image" width="350"></a> 
+    <p>Kindly go through the list of symptoms below and check off any that you've felt recently or are currently experiencing. Based on your choices, we'll provide a basic screening assessment. It's essential to note that this is a preliminary evaluation and shouldn't substitute professional medical consultation or diagnosis. We prioritize your health, so if any symptom worries you, it's best to seek advice from a healthcare expert.</p>
   </header>
 
-<div class="login">
-
-
-  <!-- <form action="/predict" method="post">
-    <label for="checkbox1">Checkbox 1</label>
-    <input type="checkbox" name="checkbox1" value="1">
-    <br>
-
-    <label for="checkbox2">Checkbox 2</label>
-    <input type="checkbox" name="checkbox2" value="1">
-    <br>
-
-    <label for="checkbox3">Checkbox 3</label>
-    <input type="checkbox" name="checkbox3" value="1">
-    <br>
-
-    <input type="submit" value="Submit">
-</form> -->
+<div class="main">
 
 <form action="/predict" method="post">
 
-  <div class="section">
-    <div class="accordion">
-      <div class="accordion-btn"> <span>Dermatologist Symptoms</span></div>
-      <div class="panel">
-        <div class="content1"><input type="checkbox" name="checkbox1" value="1">Itching</div>
-        <div class="content1"><input type="checkbox" name="checkbox2" value="1">Skin Rash</div>
-        <div class="content1"><input type="checkbox" name="checkbox3" value="1">Nodel Skin Eruptions</div>
-        <div class="content1"><input type="checkbox" name="checkbox4" value="1">Red spots over the body</div>
-      </div>      
-    </div>
-  
-    <div class="accordion">
-      <div class="accordion-btn"> <span>Respiratory Symptoms</span></div>
-      <div class="panel">
-        <div class="content1"><input type="checkbox" name="checkbox1" value="1">Itching</div>
-        <div class="content1"><input type="checkbox" name="checkbox2" value="1">Skin Rash</div>
-        <div class="content1"><input type="checkbox" name="checkbox3" value="1">Nodel Skin Eruptions</div>
-        <div class="content1"><input type="checkbox" name="checkbox4" value="1">Red spots over the body</div>
-      </div>      
-    </div>
-  
-    <div class="accordion">
-      <div class="accordion-btn"> <span>Musculoskeletal Symptoms</span></div>
-      <div class="panel">
-        <div class="content1"><input type="checkbox" name="checkbox1" value="1">Itching</div>
-        <div class="content1"><input type="checkbox" name="checkbox2" value="1">Skin Rash</div>
-        <div class="content1"><input type="checkbox" name="checkbox3" value="1">Nodel Skin Eruptions</div>
-        <div class="content1"><input type="checkbox" name="checkbox4" value="1">Red spots over the body</div>
-      </div>      
-    </div>
-  
-    <div class="accordion">
-      <div class="accordion-btn"> <span>Gastrointestinal Symptoms</span></div>
-      <div class="panel">
-        <div class="content1"><input type="checkbox" name="checkbox1" value="1">Itching</div>
-        <div class="content1"><input type="checkbox" name="checkbox2" value="1">Skin Rash</div>
-        <div class="content1"><input type="checkbox" name="checkbox3" value="1">Nodel Skin Eruptions</div>
-        <div class="content1"><input type="checkbox" name="checkbox4" value="1">Red spots over the body</div>
-      </div>      
-    </div>
-  
-  
-    <div class="accordion">
-      <div class="accordion-btn"> <span>Cardiovascular Symptoms</span></div>
-      <div class="panel">
-        <div class="content1"><input type="checkbox" name="checkbox1" value="1">Itching</div>
-        <div class="content1"><input type="checkbox" name="checkbox2" value="1">Skin Rash</div>
-        <div class="content1"><input type="checkbox" name="checkbox3" value="1">Nodel Skin Eruptions</div>
-        <div class="content1"><input type="checkbox" name="checkbox4" value="1">Red spots over the body</div>
-      </div>      
-    </div>
-  
-    <div class="accordion">
-      <div class="accordion-btn"> <span>Neurological and Mental Health Symptoms</span></div>
-      <div class="panel">
-        <div class="content1"><input type="checkbox" name="checkbox1" value="1">Itching</div>
-        <div class="content1"><input type="checkbox" name="checkbox2" value="1">Skin Rash</div>
-        <div class="content1"><input type="checkbox" name="checkbox3" value="1">Nodel Skin Eruptions</div>
-        <div class="content1"><input type="checkbox" name="checkbox4" value="1">Red spots over the body</div>
-      </div>      
-    </div>
-  </div>
 
-  <div class="section">
-    <div class="accordion">
-      <div class="accordion-btn"> <span>Urinary and Genitourinary Symptoms</span></div>
-      <div class="panel">
-        <div class="content1"><input type="checkbox" name="checkbox1" value="1">Itching</div>
-        <div class="content1"><input type="checkbox" name="checkbox2" value="1">Skin Rash</div>
-        <div class="content1"><input type="checkbox" name="checkbox3" value="1">Nodel Skin Eruptions</div>
-        <div class="content1"><input type="checkbox" name="checkbox4" value="1">Red spots over the body</div>
-      </div>      
-    </div>
-  
-    <div class="accordion">
-      <div class="accordion-btn"> <span>Blood-Related Symptoms</span></div>
-      <div class="panel">
-        <div class="content1"><input type="checkbox" name="checkbox1" value="1">Itching</div>
-        <div class="content1"><input type="checkbox" name="checkbox2" value="1">Skin Rash</div>
-        <div class="content1"><input type="checkbox" name="checkbox3" value="1">Nodel Skin Eruptions</div>
-        <div class="content1"><input type="checkbox" name="checkbox4" value="1">Red spots over the body</div>
-      </div>      
-    </div>
-  
-    <div class="accordion">
-      <div class="accordion-btn"> <span>Eye and Vision Symptoms</span></div>
-      <div class="panel">
-        <div class="content1"><input type="checkbox" name="checkbox1" value="1">Itching</div>
-        <div class="content1"><input type="checkbox" name="checkbox2" value="1">Skin Rash</div>
-        <div class="content1"><input type="checkbox" name="checkbox3" value="1">Nodel Skin Eruptions</div>
-        <div class="content1"><input type="checkbox" name="checkbox4" value="1">Red spots over the body</div>
-      </div>      
-    </div>
-  
-    <div class="accordion">
-      <div class="accordion-btn"> <span>Reproductive and Menstrual Symptoms</span></div>
-      <div class="panel">
-        <div class="content1"><input type="checkbox" name="checkbox1" value="1">Itching</div>
-        <div class="content1"><input type="checkbox" name="checkbox2" value="1">Skin Rash</div>
-        <div class="content1"><input type="checkbox" name="checkbox3" value="1">Nodel Skin Eruptions</div>
-        <div class="content1"><input type="checkbox" name="checkbox4" value="1">Red spots over the body</div>
-      </div>      
-    </div>
-  
-    <div class="accordion">
-      <div class="accordion-btn"> <span>Endocrine Symptoms</span></div>
-      <div class="panel">
-        <div class="content1"><input type="checkbox" name="checkbox1" value="1">Itching</div>
-        <div class="content1"><input type="checkbox" name="checkbox2" value="1">Skin Rash</div>
-        <div class="content1"><input type="checkbox" name="checkbox3" value="1">Nodel Skin Eruptions</div>
-        <div class="content1"><input type="checkbox" name="checkbox4" value="1">Red spots over the body</div>
-      </div>      
-    </div>
-  
-    <div class="accordion">
-      <div class="accordion-btn"> <span>Speech and Sensory Symptoms</span></div>
-      <div class="panel">
-        <div class="content1"><input type="checkbox" name="checkbox1" value="1">Itching</div>
-        <div class="content1"><input type="checkbox" name="checkbox2" value="1">Skin Rash</div>
-        <div class="content1"><input type="checkbox" name="checkbox3" value="1">Nodel Skin Eruptions</div>
-        <div class="content1"><input type="checkbox" name="checkbox4" value="1">Red spots over the body</div>
-      </div>      
-    </div>
+  {% if prediction_text %}
+  <div class="text-center">
+    <div class="prediction">{{ prediction_text }}</div>
   </div>
+  {% else %}
+  <div class="container">
+    <div class="row">
+        <h3>Symptoms Screening</h3>
+        <div class="col-md-6">
+        <div class="section">
+            <div class="panel">
+                <div class="content1"><input type="checkbox" name="checkbox1" value="1"><div class="label">Muscle pain</div></div>
+                <div class="content1"><input type="checkbox" name="checkbox2" value="1"><div class="label">Itching</div></div>
+                <div class="content1"><input type="checkbox" name="checkbox3" value="1"><div class="label">Altered Sensorium</div></div>
+                <div class="content1"><input type="checkbox" name="checkbox4" value="1"><div class="label">Dark urine</div></div>
+                <div class="content1"><input type="checkbox" name="checkbox5" value="1"><div class="label">High Fever</div></div>
+                <div class="content1"><input type="checkbox" name="checkbox6" value="1"><div class="label">Mid Fever</div></div>
+                <div class="content1"><input type="checkbox" name="checkbox7" value="1"><div class="label">Family History</div></div>
+                <div class="content1"><input type="checkbox" name="checkbox8" value="1"><div class="label">Nausea</div></div>
+                <div class="content1"><input type="checkbox" name="checkbox9" value="1"><div class="label">Yellowing of eyes</div></div>
+                <div class="content1"><input type="checkbox" name="checkbox10" value="1"><div class="label">Sweating</div></div>
+                <div class="content1"><input type="checkbox" name="checkbox11" value="1"><div class="label">Unsteadiness</div></div>
+                <div class="content1"><input type="checkbox" name="checkbox12" value="1"><div class="label">Chest Pain</div></div>
+                <div class="content1"><input type="checkbox" name="checkbox13" value="1"><div class="label">Fatigue</div></div>
+                <div class="content1"><input type="checkbox" name="checkbox14" value="1"><div class="label">Abdominal Pain</div></div>
+                <div class="content1"><input type="checkbox" name="checkbox15" value="1"><div class="label">Joint Pain</div></div>
+                <div class="content1"><input type="checkbox" name="checkbox16" value="1"><div class="label">Diarrhoea</div></div>
+                <div class="content1"><input type="checkbox" name="checkbox17" value="1"><div class="label">Lack of Concentration</div></div>
+                <div class="content1"><input type="checkbox" name="checkbox18" value="1"><div class="label">Red spots over body</div></div>
+                <div class="content1"><input type="checkbox" name="checkbox19" value="1"><div class="label">loss of appetite</div></div>
+                <div class="content1"><input type="checkbox" name="checkbox20" value="1"><div class="label">Vomiting</div></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="section">
+            <div class="panel">
+              <div class="content1"><input type="checkbox" name="checkbox21" value="1"><div class="label">Chills</div></div>
+              <div class="content1"><input type="checkbox" name="checkbox22" value="1"><div class="label">Breathlessness</div></div>
+              <div class="content1"><input type="checkbox" name="checkbox23" value="1"><div class="label">Bladder Discomfort</div></div>
+              <div class="content1"><input type="checkbox" name="checkbox24" value="1"><div class="label">Rusty Sputum</div></div>
+              <div class="content1"><input type="checkbox" name="checkbox25" value="1"><div class="label">Headache</div></div>
+              <div class="content1"><input type="checkbox" name="checkbox26" value="1"><div class="label">Dischromic patches</div></div>
+              <div class="content1"><input type="checkbox" name="checkbox27" value="1"><div class="label">Back pain</div></div>
+              <div class="content1"><input type="checkbox" name="checkbox28" value="1"><div class="label">Cough</div></div>
+              <div class="content1"><input type="checkbox" name="checkbox29" value="1"><div class="label">Receiving Unsterile Injections</div></div>
+              <div class="content1"><input type="checkbox" name="checkbox30" value="1"><div class="label">Mucoid Sputum</div></div>
+              <div class="content1"><input type="checkbox" name="checkbox31" value="1"><div class="label">Red Sore Around Nose</div></div>
+              <div class="content1"><input type="checkbox" name="checkbox32" value="1"><div class="label">Stomach Bleeding</div></div>
+              <div class="content1"><input type="checkbox" name="checkbox33" value="1"><div class="label">Abnormal Menstruation</div></div>
+              <div class="content1"><input type="checkbox" name="checkbox34" value="1"><div class="label">Weight Loss</div></div>
+              <div class="content1"><input type="checkbox" name="checkbox35" value="1"><div class="label">Neck Pain</div></div>
+              <div class="content1"><input type="checkbox" name="checkbox36" value="1"><div class="label">Stomach Pain</div></div>
+              <div class="content1"><input type="checkbox" name="checkbox37" value="1"><div class="label">Internal Itching</div></div>
+              <div class="content1"><input type="checkbox" name="checkbox38" value="1"><div class="label">Muscle weakness</div></div>
+              <div class="content1"><input type="checkbox" name="checkbox39" value="1"><div class="label">Coma</div></div>
+              <div class="content1"><input type="checkbox" name="checkbox40" value="1"><div class="label">Continuous feel of urine</div></div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+  {% endif %}
 
-  <div class="section">
-    <div class="accordion">
-      <div class="accordion-btn"> <span>Respiratory and Allergy Symptoms</span></div>
-      <div class="panel">
-        <div class="content1"><input type="checkbox" name="checkbox1" value="1">Itching</div>
-        <div class="content1"><input type="checkbox" name="checkbox2" value="1">Skin Rash</div>
-        <div class="content1"><input type="checkbox" name="checkbox3" value="1">Nodel Skin Eruptions</div>
-        <div class="content1"><input type="checkbox" name="checkbox4" value="1">Red spots over the body</div>
-      </div>      
-    </div>
-  
-    <div class="accordion">
-      <div class="accordion-btn"> <span>Urinary Symptoms</span></div>
-      <div class="panel">
-        <div class="content1"><input type="checkbox" name="checkbox1" value="1">Itching</div>
-        <div class="content1"><input type="checkbox" name="checkbox2" value="1">Skin Rash</div>
-        <div class="content1"><input type="checkbox" name="checkbox3" value="1">Nodel Skin Eruptions</div>
-        <div class="content1"><input type="checkbox" name="checkbox4" value="1">Red spots over the body</div>
-      </div>      
-    </div>
-  
-    <div class="accordion">
-      <div class="accordion-btn"> <span>Psychological Symptoms</span></div>
-      <div class="panel">
-        <div class="content1"><input type="checkbox" name="checkbox1" value="1">Itching</div>
-        <div class="content1"><input type="checkbox" name="checkbox2" value="1">Skin Rash</div>
-        <div class="content1"><input type="checkbox" name="checkbox3" value="1">Nodel Skin Eruptions</div>
-        <div class="content1"><input type="checkbox" name="checkbox4" value="1">Red spots over the body</div>
-      </div>      
-    </div>
-  
-    <div class="accordion">
-      <div class="accordion-btn"> <span>Medical History-Related Symptoms</span></div>
-      <div class="panel">
-        <div class="content1"><input type="checkbox" name="checkbox1" value="1">Itching</div>
-        <div class="content1"><input type="checkbox" name="checkbox2" value="1">Skin Rash</div>
-        <div class="content1"><input type="checkbox" name="checkbox3" value="1">Nodel Skin Eruptions</div>
-        <div class="content1"><input type="checkbox" name="checkbox4" value="1">Red spots over the body</div>
-      </div>      
-    </div>
-  
-    <div class="accordion">
-      <div class="accordion-btn"> <span>Blood-Related Symptoms</span></div>
-      <div class="panel">
-        <div class="content1"><input type="checkbox" name="checkbox1" value="1">Itching</div>
-        <div class="content1"><input type="checkbox" name="checkbox2" value="1">Skin Rash</div>
-        <div class="content1"><input type="checkbox" name="checkbox3" value="1">Nodel Skin Eruptions</div>
-        <div class="content1"><input type="checkbox" name="checkbox4" value="1">Red spots over the body</div>
-      </div>      
-    </div>
-  
-    <div class="accordion">
-      <div class="accordion-btn"> <span>Neurological Symptoms</span></div>
-      <div class="panel">
-        <div class="content1"><input type="checkbox" name="checkbox1" value="1">Itching</div>
-        <div class="content1"><input type="checkbox" name="checkbox2" value="1">Skin Rash</div>
-        <div class="content1"><input type="checkbox" name="checkbox3" value="1">Nodel Skin Eruptions</div>
-        <div class="content1"><input type="checkbox" name="checkbox4" value="1">Red spots over the body</div>
-      </div>      
-    </div>
+
+
+  <div id="submit">
+    <input class="submit" type="submit" value="Submit">
   </div>
-
-  <input class="submit" type="submit" value="Submit">
 </form>
-
-  {{ prediction_text }}
 
 </div>
 
-
-<script>
-  // Toggle 'active' and 'show' states of panels
-
-var accord = document.getElementsByClassName("accordion-btn");
-var i;
-
-for (i = 0; i < accord.length; i++) {
-    accord[i].onclick = function() {
-        this.classList.toggle("active");
-        this.nextElementSibling.classList.toggle("show");
-    }
-}
-</script>
-
 </body>
 </html>
-
-
-

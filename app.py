@@ -18,22 +18,22 @@ def predict():
 
         checkbox_values = []
 
-        for i in range(1, 5):  # Assuming you have checkboxes named 'checkbox1', 'checkbox2', 'checkbox3'
+        for i in range(1, 41):  # Assuming you have checkboxes named 'checkbox1', 'checkbox2', 'checkbox3'
             checkbox_name = f'checkbox{i}'
             checkbox_value = request.form.get(checkbox_name, '0')
             checkbox_values.append(checkbox_value)
 
         print('ffff', checkbox_values)
 
-        int_features = [x for x in request.form.values()]
-        print('form DATA', int_features)
-        int_features=[1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-        print('intfeatures', int_features)
+        int_features = [int(x) for x in checkbox_values]
+        #print('form DATA', int_features)
+        #int_features=[1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        #print('intfeatures', int_features)
         final_features = [np.array(int_features)]
         print('final features', final_features)
         output = model_load.predict(final_features).tolist()
         print('final output', output)
-        return render_template('index.html', prediction_text='Prediction {}'.format(output))
+        return render_template('index.html', prediction_text='{}'.format(output[0]))
         #return render_template('index.html', prediction_text='hello')
     else :
         return render_template('index.html')
