@@ -25,8 +25,7 @@
 <div class="main">
 
 <form action="/predict" method="post">
-
-
+  
   {% if prediction_text %}
   <div class="text-center">
     <div class="prediction">{{ prediction_text }}</div>
@@ -95,6 +94,7 @@
 
   <div id="submit">
     <input class="submit" type="submit" value="Submit">
+    <a class="restart" href="#">Restart</a>
   </div>
 </form>
 

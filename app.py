@@ -23,12 +23,8 @@ def predict():
             checkbox_value = request.form.get(checkbox_name, '0')
             checkbox_values.append(checkbox_value)
 
-        print('ffff', checkbox_values)
-
         int_features = [int(x) for x in checkbox_values]
-        #print('form DATA', int_features)
-        #int_features=[1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-        #print('intfeatures', int_features)
+
         final_features = [np.array(int_features)]
         print('final features', final_features)
         output = model_load.predict(final_features).tolist()

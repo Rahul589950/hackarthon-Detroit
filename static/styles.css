@@ -10,6 +10,11 @@ body{font-family: sans-serif !important;}
 header{text-align: center;padding: 40px 0;margin-top:50px;}
 header p{font-size: 19px;margin-top:50px;}
 #submit{padding: 12px;background: rgba(240, 240, 240, 1);position: fixed;width:100%;bottom:0;}
+#submit input{background: #d3eed3;
+  border: 1px solid #90c290;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 6px 20px;}
 h3{color:#a6093d;}
 .content1 .label{display: inline-block;}
 .content1 input:checked + .label {
@@ -17,3 +22,4 @@ h3{color:#a6093d;}
 }
 .main{margin-bottom: 200px;}
 .prediction{background:#d3efd3;margin-bottom: 50px;padding: 18px;display: inline-block; border-radius: 16px;}
+.restart{background: #eed3d3;border: 1px solid #c29090;border-radius: 10px;font-size: 20px;padding: 9px 20px;text-decoration: none;color:#000;}
