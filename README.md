@@ -26,7 +26,7 @@ We aim to create an engaging and user-friendly web platform where users can ente
 4.	Providing brief insights on prognosis:
 Once our model provides prognosis to users, they can check on our website to get brief insights on their prognosis. As this model is under Apache 2.0 open-source license, and most tools used to implement this application are open source, we aim to create a skeleton framework, with the hope that it will be community driven and continue to add new feature for users to make users more informed, for example providing information on prescription medication and their possible side effects. To add validity to this platform, we would like to cooperate with medical professionals in the future.
 
-Data Sets and model information: Disease Prediction Logistic Regression
+Data Sets and model information: https://www.kaggle.com/code/ragishehab/disease-prediction-logistic-regression/notebook#notebook-container
 
 References
 
